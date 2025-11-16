@@ -1,0 +1,143 @@
+/* Save as: style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #111111;
+  --gold: #D4AF37;
+  --light-gray: #FAFAFA;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Hero === */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.gold {
+  color: var(--gold);
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+}
+
+/* === Projects Grid === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--light-gray);
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* === Contact Section === */
+.contact {
+  background: var(--light-gray);
+  text-align: center;
+}
+
+/* === Footer === */
+footer {
+  background: var(--black);
+  color: var(--gold);
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+}
